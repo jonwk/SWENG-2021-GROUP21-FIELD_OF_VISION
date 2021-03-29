@@ -27,10 +27,12 @@ class SecondPage extends StatelessWidget {
     return Scrollbar(
       child: ListView(
         children: List.generate(9, (int i) {
+          int game = i + 1;
           return Column(
             children: <Widget>[
               GestureDetector(
                 onTap: () {
+                  debugPrint('Loading co-ordinates for game  $game');
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => ThirdPage()),
